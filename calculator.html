@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <script>
+        var halfoperation=0;
+        var store=0;
+        var opsign="";
+            function myfunc7(){
+            if(document.getElementById('box').value!="0")
+            document.getElementById('box').value=document.getElementById('box').value+document.getElementById("btn7").value;
+            else
+            document.getElementById('box').value=document.getElementById("btn7").value;
+            }
+            function myfunc8(){
+            if(document.getElementById('box').value!="0")
+            document.getElementById('box').value=document.getElementById('box').value+document.getElementById("btn8").value;
+            else
+            document.getElementById('box').value=document.getElementById("btn8").value;
+            }
+            function myfunc9(){
+            if(document.getElementById('box').value!="0")
+            document.getElementById('box').value=document.getElementById('box').value+document.getElementById("btn9").value;
+            else
+            document.getElementById('box').value=document.getElementById("btn9").value;
+            }
+
+            function myfunc4(){
+            if(document.getElementById('box').value!="0")
+            document.getElementById('box').value=document.getElementById('box').value+document.getElementById("btn4").value;
+            else
+            document.getElementById('box').value=document.getElementById("btn4").value;
+            }
+            function myfunc5(){
+            if(document.getElementById('box').value!="0")
+            document.getElementById('box').value=document.getElementById('box').value+document.getElementById("btn5").value;
+            else
+            document.getElementById('box').value=document.getElementById("btn5").value;
+            }
+            function myfunc6(){
+            if(document.getElementById('box').value!="0")
+            document.getElementById('box').value=document.getElementById('box').value+document.getElementById("btn6").value;
+            else
+            document.getElementById('box').value=document.getElementById("btn6").value;
+            }
+
+            function myfunc1(){
+            if(document.getElementById('box').value!="0")
+            document.getElementById('box').value=document.getElementById('box').value+document.getElementById("btn1").value;
+            else
+            document.getElementById('box').value=document.getElementById("btn1").value;
+            }
+            function myfunc2(){
+            if(document.getElementById('box').value!="0")
+            document.getElementById('box').value=document.getElementById('box').value+document.getElementById("btn2").value;
+            else
+            document.getElementById('box').value=document.getElementById("btn2").value;
+            }
+            function myfunc3(){
+            if(document.getElementById('box').value!="0")
+            document.getElementById('box').value=document.getElementById('box').value+document.getElementById("btn3").value;
+            else
+            document.getElementById('box').value=document.getElementById("btn3").value;
+            }
+            function myfunc0(){
+            if(document.getElementById('box').value!="0")
+            document.getElementById('box').value=document.getElementById('box').value+document.getElementById("btn0").value;
+            else
+            document.getElementById('box').value=document.getElementById("btn0").value;
+            }
+
+            function Addition(){
+                halfoperation=parseFloat(document.getElementById("box").value);
+                store+=halfoperation;
+                document.getElementById("box").value=0;
+                opsign="+";
+            }
+
+            function Difference(){
+                halfoperation=parseFloat(document.getElementById("box").value);
+                document.getElementById("box").value=0;
+                opsign="-";
+            }
+
+            function Multiplication(){
+                halfoperation=parseFloat(document.getElementById("box").value);
+                document.getElementById("box").value=0;
+                opsign="*";
+            }
+
+            function Division(){
+                halfoperation=parseFloat(document.getElementById("box").value);
+                document.getElementById("box").value=0;
+                opsign="/";
+            }
+            function CangeSignofNumber(){
+                document.getElementById("box").value=parseFloat(document.getElementById("box").value)*(-1);
+            }
+
+            function EqualsTo(){
+                if(opsign=="+"){
+                document.getElementById("box").value=halfoperation+parseFloat(document.getElementById("box").value);
+               opsign="o";
+                }
+                if(opsign=="-"){
+                document.getElementById("box").value=halfoperation-parseFloat(document.getElementById("box").value);
+                opsign="o";
+                }
+                if(opsign=="*"){
+                document.getElementById("box").value=halfoperation*parseFloat(document.getElementById("box").value);
+                opsign="o";
+                }
+                if(opsign=="/"){
+                if(parseFloat(document.getElementById("box").value)!=0){
+                document.getElementById("box").value=halfoperation/parseFloat(document.getElementById("box").value);
+                opsign="o";
+                }
+                else
+                window.alert("You can't divide a nuber with 0!");
+                }
+            }
+            function AC(){
+                document.getElementById("box").value=0;
+                halfoperation=0;
+                store=0;
+            }
+            function DEL(){
+                var temp=document.getElementById("box").value;
+                var temp2="";
+                for(let i=0;i<temp.length-1;i++){
+                temp2+=temp[i];
+                }
+                document.getElementById("box").value=temp2;
+                
+            }
+            function Dot(){
+                var temp=document.getElementById("box").value;
+                counter=0;
+                for(let i=0;i<temp.length;i++){
+                    if(temp[i]==".")
+                    counter++;
+                }
+                if(counter==0){
+                    document.getElementById("box").value+=".";
+                }
+                
+            }
+    </script>
+</head>
+<body>
+    <div style="margin-left: 40%;margin-top: 10%;border: 3px solid salmon;border-radius: 5px; padding: 13px; width: 280px;height: 330px;">
+    <table style="text-align: center;">
+        <input id="box" value=0 type="text" style="width: 130px;height: 35px;font-size: large; border-radius: 10px;margin-right: 5px;padding-left: 6px;"><button id="btn" type="button" onclick="DEL()" style="cursor: pointer; color: red;background-color: rgb(238, 202, 202);padding: 12px;border-radius: 10px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: large;border-color: red;width: 70px;">DEL</button>
+        <tr>
+            <td><button id="btn7" value=7 type="button" onclick="myfunc7()" style="cursor: pointer; color: rgb(8, 63, 60);background-color: rgb(191, 228, 245);padding: 12px;border-radius: 10px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: large;border-color: red;width: 50px;">7</button></td>
+            <td><button id="btn8" value=8 type="button" onclick="myfunc8()" style="cursor: pointer; color: rgb(8, 63, 60);background-color: rgb(191, 228, 245);padding: 12px;border-radius: 10px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: large;border-color: red;width: 50px;">8</button></td>
+            <td><button id="btn9" value=9 type="button" onclick="myfunc9()" style="cursor: pointer; color: rgb(8, 63, 60);background-color: rgb(191, 228, 245);padding: 12px;border-radius: 10px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: large;border-color: red;width: 50px;">9</button></td>
+            <td><button type="button" onclick="Addition()" style="cursor: pointer; color: rgb(9, 77, 47);background-color: rgb(187, 235, 180);padding: 12px;border-radius: 10px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: large;border-color: rgb(9, 77, 47); width: 50px;">+</button></td>
+        </tr>
+        <tr>
+            <td><button id="btn4" value=4 type="button" onclick="myfunc4()" style="cursor: pointer; color: rgb(8, 63, 60);background-color: rgb(191, 228, 245);padding: 12px;border-radius: 10px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: large;border-color: red;width: 50px;">4</button></td>
+            <td><button id="btn5" value=5 type="button" onclick="myfunc5()" style="cursor: pointer; color: rgb(8, 63, 60);background-color: rgb(191, 228, 245);padding: 12px;border-radius: 10px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: large;border-color: red;width: 50px;">5</button></td>
+            <td><button id="btn6" value=6 type="button" onclick="myfunc6()" style="cursor: pointer; color: rgb(8, 63, 60);background-color: rgb(191, 228, 245);padding: 12px;border-radius: 10px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: large;border-color: red;width: 50px;">6</button></td>
+            <td><button type="button" onclick="Difference()" style="cursor: pointer; color: rgb(9, 77, 47);background-color: rgb(187, 235, 180);padding: 12px;border-radius: 10px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: large;border-color: rgb(9, 77, 47); width: 50px;">-</button></td>
+        </tr>
+        <tr>
+            <td><button id="btn1" value=1 type="button" onclick="myfunc1()" style="cursor: pointer; color: rgb(8, 63, 60);background-color: rgb(191, 228, 245);padding: 12px;border-radius: 10px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: large;border-color: red;width: 50px;">1</button></td>
+            <td><button id="btn2" value=2 type="button" onclick="myfunc2()" style="cursor: pointer; color: rgb(8, 63, 60);background-color: rgb(191, 228, 245);padding: 12px;border-radius: 10px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: large;border-color: red;width: 50px;">2</button></td>
+            <td><button id="btn3" value=3 type="button" onclick="myfunc3()" style="cursor: pointer; color: rgb(8, 63, 60);background-color: rgb(191, 228, 245);padding: 12px;border-radius: 10px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: large;border-color: red;width: 50px;">3</button></td>
+            <td><button type="button" onclick="Multiplication()" style="cursor: pointer; color: rgb(9, 77, 47);background-color: rgb(187, 235, 180);padding: 12px;border-radius: 10px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: large;border-color: rgb(9, 77, 47); width: 50px;">*</button></td>
+        </tr>
+        <tr>
+            <td><button id="btn" type="button" onclick="Dot()" style="cursor: pointer; color: rgb(24, 8, 63);background-color: rgb(145, 146, 177);padding: 12px;border-radius: 10px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: large;border-color: rgb(24, 8, 63);width: 40px;">.</button></td>
+            <td><button id="btn0" value=0 type="button" onclick="myfunc0()" style="cursor: pointer; color: rgb(8, 63, 60);background-color: rgb(191, 228, 245);padding: 12px;border-radius: 10px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: large;border-color: red;width: 40px;">0</button></td>
+            <td><button type="button" onclick="CangeSignofNumber()" style="cursor: pointer; color: rgb(24, 8, 63);background-color: rgb(145, 146, 177);padding: 12px;border-radius: 10px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: large;border-color: rgb(24, 8, 63);width: 50px;">+/-</button></td>
+            <td><button type="button" onclick="Division()" style="cursor: pointer; color: rgb(9, 77, 47);background-color: rgb(187, 235, 180);padding: 12px;border-radius: 10px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: large;border-color: rgb(9, 77, 47); width: 50px;">/</button></td>
+        </tr>
+        <table>
+            <tr>
+                <td><button id="btn" type="button" onclick="AC()" style="cursor: pointer; color: red;background-color: rgb(238, 202, 202);padding: 12px;border-radius: 10px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: large;border-color: red;width: 90px;">AC</button></td>
+                <td><button id="btn" type="button" onclick="EqualsTo()" style="cursor: pointer; color: rgb(98, 107, 103);background-color: rgb(219, 217, 217);padding: 12px;border-radius: 10px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: large;border-color: rgb(98, 107, 103);width: 120px;">=</button></td>
+            </tr>
+        </table>
+        <h3 style="color: rgb(236, 220, 215); margin-top: -305px; margin-left: 220px;font-family: 'Courier New', Courier, monospace;font-size: 50px; -ms-transform: rotate(90deg);-webkit-transform: rotate(90deg);transform: rotate(90deg);">CALCULATOR</h3>
+        
+        
+    </table>
+</div>
+</body>
+</html>

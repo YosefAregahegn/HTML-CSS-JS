@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>XO GAME</title>
+    <script>
+        function myfunc1(){
+            if((document.getElementById("player").innerHTML=="Player 1")&&(document.getElementById("btn1").innerHTML=="")){    
+                document.getElementById("btn1").innerHTML="X";
+                if((document.getElementById("btn1").innerHTML=="X")&&(document.getElementById("btn2").innerHTML=="X")&&(document.getElementById("btn3").innerHTML=="X")){
+                    document.getElementById("player").innerHTML="Player 1 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn1").style.color="white";
+                document.getElementById("btn1").style.backgroundColor="red";
+                document.getElementById("btn1").style.borderColor="red";
+
+                document.getElementById("btn2").style.color="white";
+                document.getElementById("btn2").style.backgroundColor="red";
+                document.getElementById("btn2").style.borderColor="red";
+
+                document.getElementById("btn3").style.color="white";
+                document.getElementById("btn3").style.backgroundColor="red";
+                document.getElementById("btn3").style.borderColor="red";
+                }
+                else if((document.getElementById("btn1").innerHTML=="X")&&(document.getElementById("btn5").innerHTML=="X")&&(document.getElementById("btn9").innerHTML=="X")){
+                    document.getElementById("player").innerHTML="Player 1 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn1").style.color="white";
+                document.getElementById("btn1").style.backgroundColor="red";
+                document.getElementById("btn1").style.borderColor="red";
+
+                document.getElementById("btn5").style.color="white";
+                document.getElementById("btn5").style.backgroundColor="red";
+                document.getElementById("btn5").style.borderColor="red";
+
+                document.getElementById("btn9").style.color="white";
+                document.getElementById("btn9").style.backgroundColor="red";
+                document.getElementById("btn9").style.borderColor="red";
+                }
+                else if((document.getElementById("btn1").innerHTML=="X")&&(document.getElementById("btn4").innerHTML=="X")&&(document.getElementById("btn7").innerHTML=="X"))
+                {
+                document.getElementById("player").innerHTML="Player 1 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn1").style.color="white";
+                document.getElementById("btn1").style.backgroundColor="red";
+                document.getElementById("btn1").style.borderColor="red";
+
+                document.getElementById("btn4").style.color="white";
+                document.getElementById("btn4").style.backgroundColor="red";
+                document.getElementById("btn4").style.borderColor="red";
+
+                document.getElementById("btn7").style.color="white";
+                document.getElementById("btn7").style.backgroundColor="red";
+                document.getElementById("btn7").style.borderColor="red";
+                
+            }
+            else if((document.getElementById("btn1").innerHTML!="")&&(document.getElementById("btn2").innerHTML!="")&&(document.getElementById("btn3").innerHTML!="")
+                &&(document.getElementById("btn4").innerHTML!="")&&(document.getElementById("btn5").innerHTML!="")&&(document.getElementById("btn6").innerHTML!="")
+                &&(document.getElementById("btn7").innerHTML!="")&&(document.getElementById("btn8").innerHTML!="")&&(document.getElementById("btn9").innerHTML!=""))
+                {
+                document.getElementById("player").innerHTML="Restart the Game!";
+                document.getElementById("btn").style.marginLeft="9px";
+            }
+            else{
+                document.getElementById("player").innerHTML="Player 2";
+            }
+            }
+            if((document.getElementById("player").innerHTML=="Player 2")&&(document.getElementById("btn1").innerHTML=="")){
+                document.getElementById("btn1").innerHTML="O";
+                if((document.getElementById("btn1").innerHTML=="O")&&(document.getElementById("btn2").innerHTML=="O")&&(document.getElementById("btn3").innerHTML=="O")){
+                    document.getElementById("player").innerHTML="Player 2 Won!";
+                document.getElementById("btn").style.marginLeft="60px";   
+                
+                document.getElementById("btn1").style.color="white";
+                document.getElementById("btn1").style.backgroundColor="red";
+                document.getElementById("btn1").style.borderColor="red";
+
+                document.getElementById("btn2").style.color="white";
+                document.getElementById("btn2").style.backgroundColor="red";
+                document.getElementById("btn2").style.borderColor="red";
+
+                document.getElementById("btn3").style.color="white";
+                document.getElementById("btn3").style.backgroundColor="red";
+                document.getElementById("btn3").style.borderColor="red";
+                }
+                else if((document.getElementById("btn1").innerHTML=="O")&&(document.getElementById("btn5").innerHTML=="O")&&(document.getElementById("btn9").innerHTML=="O")){
+                    document.getElementById("player").innerHTML="Player 2 Won!";
+                document.getElementById("btn").style.marginLeft="60px";   
+                
+                document.getElementById("btn1").style.color="white";
+                document.getElementById("btn1").style.backgroundColor="red";
+                document.getElementById("btn1").style.borderColor="red";
+
+                document.getElementById("btn5").style.color="white";
+                document.getElementById("btn5").style.backgroundColor="red";
+                document.getElementById("btn5").style.borderColor="red";
+
+                document.getElementById("btn9").style.color="white";
+                document.getElementById("btn9").style.backgroundColor="red";
+                document.getElementById("btn9").style.borderColor="red";
+                }
+                else if((document.getElementById("btn1").innerHTML=="O")&&(document.getElementById("btn4").innerHTML=="O")&&(document.getElementById("btn7").innerHTML=="O"))
+                {
+                document.getElementById("player").innerHTML="Player 2 Won!";
+                document.getElementById("btn").style.marginLeft="60px";   
+                
+                document.getElementById("btn1").style.color="white";
+                document.getElementById("btn1").style.backgroundColor="red";
+                document.getElementById("btn1").style.borderColor="red";
+
+                document.getElementById("btn4").style.color="white";
+                document.getElementById("btn4").style.backgroundColor="red";
+                document.getElementById("btn4").style.borderColor="red";
+
+                document.getElementById("btn7").style.color="white";
+                document.getElementById("btn7").style.backgroundColor="red";
+                document.getElementById("btn7").style.borderColor="red";
+            }
+            else if((document.getElementById("btn1").innerHTML!="")&&(document.getElementById("btn2").innerHTML!="")&&(document.getElementById("btn3").innerHTML!="")
+                &&(document.getElementById("btn4").innerHTML!="")&&(document.getElementById("btn5").innerHTML!="")&&(document.getElementById("btn6").innerHTML!="")
+                &&(document.getElementById("btn7").innerHTML!="")&&(document.getElementById("btn8").innerHTML!="")&&(document.getElementById("btn9").innerHTML!=""))
+                {
+                document.getElementById("player").innerHTML="Restart the Game!";
+                document.getElementById("btn").style.marginLeft="9px";
+            }
+            else{
+                document.getElementById("player").innerHTML="Player 1";
+            }
+            }
+        }
+        function myfunc2(){
+            if((document.getElementById("player").innerHTML=="Player 1")&&(document.getElementById("btn2").innerHTML=="")){    
+                document.getElementById("btn2").innerHTML="X";
+                if((document.getElementById("btn2").innerHTML=="X")&&(document.getElementById("btn1").innerHTML=="X")&&(document.getElementById("btn3").innerHTML=="X")){
+                    document.getElementById("player").innerHTML="Player 1 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn2").style.color="white";
+                document.getElementById("btn2").style.backgroundColor="red";
+                document.getElementById("btn2").style.borderColor="red";
+
+                document.getElementById("btn1").style.color="white";
+                document.getElementById("btn1").style.backgroundColor="red";
+                document.getElementById("btn1").style.borderColor="red";
+
+                document.getElementById("btn3").style.color="white";
+                document.getElementById("btn3").style.backgroundColor="red";
+                document.getElementById("btn3").style.borderColor="red";
+                }
+                else if((document.getElementById("btn2").innerHTML=="X")&&(document.getElementById("btn5").innerHTML=="X")&&(document.getElementById("btn8").innerHTML=="X"))
+                {
+                document.getElementById("player").innerHTML="Player 1 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn2").style.color="white";
+                document.getElementById("btn2").style.backgroundColor="red";
+                document.getElementById("btn2").style.borderColor="red";
+
+                document.getElementById("btn5").style.color="white";
+                document.getElementById("btn5").style.backgroundColor="red";
+                document.getElementById("btn5").style.borderColor="red";
+
+                document.getElementById("btn8").style.color="white";
+                document.getElementById("btn8").style.backgroundColor="red";
+                document.getElementById("btn8").style.borderColor="red";
+            }
+            else if((document.getElementById("btn1").innerHTML!="")&&(document.getElementById("btn2").innerHTML!="")&&(document.getElementById("btn3").innerHTML!="")
+                &&(document.getElementById("btn4").innerHTML!="")&&(document.getElementById("btn5").innerHTML!="")&&(document.getElementById("btn6").innerHTML!="")
+                &&(document.getElementById("btn7").innerHTML!="")&&(document.getElementById("btn8").innerHTML!="")&&(document.getElementById("btn9").innerHTML!=""))
+                {
+                document.getElementById("player").innerHTML="Restart the Game!";
+                document.getElementById("btn").style.marginLeft="9px";
+            }
+            else{
+                document.getElementById("player").innerHTML="Player 2";
+            }
+            }
+            if((document.getElementById("player").innerHTML=="Player 2")&&(document.getElementById("btn2").innerHTML=="")){
+                document.getElementById("btn2").innerHTML="O";
+                if((document.getElementById("btn2").innerHTML=="O")&&(document.getElementById("btn1").innerHTML=="O")&&(document.getElementById("btn3").innerHTML=="O")){
+                    document.getElementById("player").innerHTML="Player 2 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn2").style.color="white";
+                document.getElementById("btn2").style.backgroundColor="red";
+                document.getElementById("btn2").style.borderColor="red";
+
+                document.getElementById("btn1").style.color="white";
+                document.getElementById("btn1").style.backgroundColor="red";
+                document.getElementById("btn1").style.borderColor="red";
+
+                document.getElementById("btn3").style.color="white";
+                document.getElementById("btn3").style.backgroundColor="red";
+                document.getElementById("btn3").style.borderColor="red";
+                }
+                else if((document.getElementById("btn2").innerHTML=="O")&&(document.getElementById("btn5").innerHTML=="O")&&(document.getElementById("btn8").innerHTML=="O"))
+                {
+                document.getElementById("player").innerHTML="Player 2 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn2").style.color="white";
+                document.getElementById("btn2").style.backgroundColor="red";
+                document.getElementById("btn2").style.borderColor="red";
+
+                document.getElementById("btn5").style.color="white";
+                document.getElementById("btn5").style.backgroundColor="red";
+                document.getElementById("btn5").style.borderColor="red";
+
+                document.getElementById("btn8").style.color="white";
+                document.getElementById("btn8").style.backgroundColor="red";
+                document.getElementById("btn8").style.borderColor="red";
+            }
+            else if((document.getElementById("btn1").innerHTML!="")&&(document.getElementById("btn2").innerHTML!="")&&(document.getElementById("btn3").innerHTML!="")
+                &&(document.getElementById("btn4").innerHTML!="")&&(document.getElementById("btn5").innerHTML!="")&&(document.getElementById("btn6").innerHTML!="")
+                &&(document.getElementById("btn7").innerHTML!="")&&(document.getElementById("btn8").innerHTML!="")&&(document.getElementById("btn9").innerHTML!=""))
+                {
+                document.getElementById("player").innerHTML="Restart the Game!";
+                document.getElementById("btn").style.marginLeft="9px";
+            }
+            else{
+                document.getElementById("player").innerHTML="Player 1";
+            }
+            }
+        }
+        function myfunc3(){
+            if((document.getElementById("player").innerHTML=="Player 1")&&(document.getElementById("btn3").innerHTML=="")){    
+                document.getElementById("btn3").innerHTML="X";
+                if((document.getElementById("btn3").innerHTML=="X")&&(document.getElementById("btn2").innerHTML=="X")&&(document.getElementById("btn1").innerHTML=="X")){
+                    document.getElementById("player").innerHTML="Player 1 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn3").style.color="white";
+                document.getElementById("btn3").style.backgroundColor="red";
+                document.getElementById("btn3").style.borderColor="red";
+
+                document.getElementById("btn2").style.color="white";
+                document.getElementById("btn2").style.backgroundColor="red";
+                document.getElementById("btn2").style.borderColor="red";
+
+                document.getElementById("btn1").style.color="white";
+                document.getElementById("btn1").style.backgroundColor="red";
+                document.getElementById("btn1").style.borderColor="red";
+                }
+                else if((document.getElementById("btn3").innerHTML=="X")&&(document.getElementById("btn5").innerHTML=="X")&&(document.getElementById("btn7").innerHTML=="X")){
+                    document.getElementById("player").innerHTML="Player 1 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn3").style.color="white";
+                document.getElementById("btn3").style.backgroundColor="red";
+                document.getElementById("btn3").style.borderColor="red";
+
+                document.getElementById("btn5").style.color="white";
+                document.getElementById("btn5").style.backgroundColor="red";
+                document.getElementById("btn5").style.borderColor="red";
+
+                document.getElementById("btn7").style.color="white";
+                document.getElementById("btn7").style.backgroundColor="red";
+                document.getElementById("btn7").style.borderColor="red";
+                }
+                else if((document.getElementById("btn3").innerHTML=="X")&&(document.getElementById("btn6").innerHTML=="X")&&(document.getElementById("btn9").innerHTML=="X"))
+                {
+                document.getElementById("player").innerHTML="Player 1 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn3").style.color="white";
+                document.getElementById("btn3").style.backgroundColor="red";
+                document.getElementById("btn3").style.borderColor="red";
+
+                document.getElementById("btn6").style.color="white";
+                document.getElementById("btn6").style.backgroundColor="red";
+                document.getElementById("btn6").style.borderColor="red";
+
+                document.getElementById("btn9").style.color="white";
+                document.getElementById("btn9").style.backgroundColor="red";
+                document.getElementById("btn9").style.borderColor="red";
+            }
+            else if((document.getElementById("btn1").innerHTML!="")&&(document.getElementById("btn2").innerHTML!="")&&(document.getElementById("btn3").innerHTML!="")
+                &&(document.getElementById("btn4").innerHTML!="")&&(document.getElementById("btn5").innerHTML!="")&&(document.getElementById("btn6").innerHTML!="")
+                &&(document.getElementById("btn7").innerHTML!="")&&(document.getElementById("btn8").innerHTML!="")&&(document.getElementById("btn9").innerHTML!=""))
+                {
+                document.getElementById("player").innerHTML="Restart the Game!";
+                document.getElementById("btn").style.marginLeft="9px";
+            }
+            else{
+                document.getElementById("player").innerHTML="Player 2";
+            }
+            }
+            if((document.getElementById("player").innerHTML=="Player 2")&&(document.getElementById("btn3").innerHTML=="")){
+                document.getElementById("btn3").innerHTML="O";
+                if((document.getElementById("btn3").innerHTML=="O")&&(document.getElementById("btn1").innerHTML=="O")&&(document.getElementById("btn2").innerHTML=="O")){
+                    document.getElementById("player").innerHTML="Player 2 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn3").style.color="white";
+                document.getElementById("btn3").style.backgroundColor="red";
+                document.getElementById("btn3").style.borderColor="red";
+
+                document.getElementById("btn1").style.color="white";
+                document.getElementById("btn1").style.backgroundColor="red";
+                document.getElementById("btn1").style.borderColor="red";
+
+                document.getElementById("btn2").style.color="white";
+                document.getElementById("btn2").style.backgroundColor="red";
+                document.getElementById("btn2").style.borderColor="red";
+                }
+                else if((document.getElementById("btn3").innerHTML=="O")&&(document.getElementById("btn5").innerHTML=="O")&&(document.getElementById("btn7").innerHTML=="O")){
+                    document.getElementById("player").innerHTML="Player 2 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn3").style.color="white";
+                document.getElementById("btn3").style.backgroundColor="red";
+                document.getElementById("btn3").style.borderColor="red";
+
+                document.getElementById("btn5").style.color="white";
+                document.getElementById("btn5").style.backgroundColor="red";
+                document.getElementById("btn5").style.borderColor="red";
+
+                document.getElementById("btn7").style.color="white";
+                document.getElementById("btn7").style.backgroundColor="red";
+                document.getElementById("btn7").style.borderColor="red";
+                }
+                else if((document.getElementById("btn3").innerHTML=="O")&&(document.getElementById("btn6").innerHTML=="O")&&(document.getElementById("btn9").innerHTML=="O"))
+                {
+                document.getElementById("player").innerHTML="Player 2 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn3").style.color="white";
+                document.getElementById("btn3").style.backgroundColor="red";
+                document.getElementById("btn3").style.borderColor="red";
+
+                document.getElementById("btn6").style.color="white";
+                document.getElementById("btn6").style.backgroundColor="red";
+                document.getElementById("btn6").style.borderColor="red";
+
+                document.getElementById("btn9").style.color="white";
+                document.getElementById("btn9").style.backgroundColor="red";
+                document.getElementById("btn9").style.borderColor="red";
+            }
+            else if((document.getElementById("btn1").innerHTML!="")&&(document.getElementById("btn2").innerHTML!="")&&(document.getElementById("btn3").innerHTML!="")
+                &&(document.getElementById("btn4").innerHTML!="")&&(document.getElementById("btn5").innerHTML!="")&&(document.getElementById("btn6").innerHTML!="")
+                &&(document.getElementById("btn7").innerHTML!="")&&(document.getElementById("btn8").innerHTML!="")&&(document.getElementById("btn9").innerHTML!=""))
+                {
+                document.getElementById("player").innerHTML="Restart the Game!";
+                document.getElementById("btn").style.marginLeft="9px";
+            }
+            else{
+                document.getElementById("player").innerHTML="Player 1";
+            }
+            }
+        }
+        function myfunc4(){
+            if((document.getElementById("player").innerHTML=="Player 1")&&(document.getElementById("btn4").innerHTML=="")){    
+                document.getElementById("btn4").innerHTML="X";
+                if((document.getElementById("btn4").innerHTML=="X")&&(document.getElementById("btn1").innerHTML=="X")&&(document.getElementById("btn7").innerHTML=="X")){
+                    document.getElementById("player").innerHTML="Player 1 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn4").style.color="white";
+                document.getElementById("btn4").style.backgroundColor="red";
+                document.getElementById("btn4").style.borderColor="red";
+
+                document.getElementById("btn1").style.color="white";
+                document.getElementById("btn1").style.backgroundColor="red";
+                document.getElementById("btn1").style.borderColor="red";
+
+                document.getElementById("btn7").style.color="white";
+                document.getElementById("btn7").style.backgroundColor="red";
+                document.getElementById("btn7").style.borderColor="red";
+                }
+                else if((document.getElementById("btn4").innerHTML=="X")&&(document.getElementById("btn5").innerHTML=="X")&&(document.getElementById("btn6").innerHTML=="X"))
+                {
+                document.getElementById("player").innerHTML="Player 1 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn4").style.color="white";
+                document.getElementById("btn4").style.backgroundColor="red";
+                document.getElementById("btn4").style.borderColor="red";
+
+                document.getElementById("btn5").style.color="white";
+                document.getElementById("btn5").style.backgroundColor="red";
+                document.getElementById("btn5").style.borderColor="red";
+
+                document.getElementById("btn6").style.color="white";
+                document.getElementById("btn6").style.backgroundColor="red";
+                document.getElementById("btn6").style.borderColor="red";
+            }
+            else if((document.getElementById("btn1").innerHTML!="")&&(document.getElementById("btn2").innerHTML!="")&&(document.getElementById("btn3").innerHTML!="")
+                &&(document.getElementById("btn4").innerHTML!="")&&(document.getElementById("btn5").innerHTML!="")&&(document.getElementById("btn6").innerHTML!="")
+                &&(document.getElementById("btn7").innerHTML!="")&&(document.getElementById("btn8").innerHTML!="")&&(document.getElementById("btn9").innerHTML!=""))
+                {
+                document.getElementById("player").innerHTML="Restart the Game!";
+                document.getElementById("btn").style.marginLeft="9px";
+            }
+            else{
+                document.getElementById("player").innerHTML="Player 2";
+            }
+            }
+            if((document.getElementById("player").innerHTML=="Player 2")&&(document.getElementById("btn4").innerHTML=="")){
+                document.getElementById("btn4").innerHTML="O";
+                if((document.getElementById("btn4").innerHTML=="O")&&(document.getElementById("btn1").innerHTML=="O")&&(document.getElementById("btn7").innerHTML=="O")){
+                    document.getElementById("player").innerHTML="Player 2 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn4").style.color="white";
+                document.getElementById("btn4").style.backgroundColor="red";
+                document.getElementById("btn4").style.borderColor="red";
+
+                document.getElementById("btn1").style.color="white";
+                document.getElementById("btn1").style.backgroundColor="red";
+                document.getElementById("btn1").style.borderColor="red";
+
+                document.getElementById("btn7").style.color="white";
+                document.getElementById("btn7").style.backgroundColor="red";
+                document.getElementById("btn7").style.borderColor="red";
+                }
+                else if((document.getElementById("btn4").innerHTML=="O")&&(document.getElementById("btn5").innerHTML=="O")&&(document.getElementById("btn6").innerHTML=="O"))
+                {
+                document.getElementById("player").innerHTML="Player 2 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn4").style.color="white";
+                document.getElementById("btn4").style.backgroundColor="red";
+                document.getElementById("btn4").style.borderColor="red";
+
+                document.getElementById("btn5").style.color="white";
+                document.getElementById("btn5").style.backgroundColor="red";
+                document.getElementById("btn5").style.borderColor="red";
+
+                document.getElementById("btn6").style.color="white";
+                document.getElementById("btn6").style.backgroundColor="red";
+                document.getElementById("btn6").style.borderColor="red";
+            }
+            else if((document.getElementById("btn1").innerHTML!="")&&(document.getElementById("btn2").innerHTML!="")&&(document.getElementById("btn3").innerHTML!="")
+                &&(document.getElementById("btn4").innerHTML!="")&&(document.getElementById("btn5").innerHTML!="")&&(document.getElementById("btn6").innerHTML!="")
+                &&(document.getElementById("btn7").innerHTML!="")&&(document.getElementById("btn8").innerHTML!="")&&(document.getElementById("btn9").innerHTML!=""))
+                {
+                document.getElementById("player").innerHTML="Restart the Game!";
+                document.getElementById("btn").style.marginLeft="9px";
+            }
+            else{
+                document.getElementById("player").innerHTML="Player 1";
+            }
+            }
+        }
+        function myfunc5(){
+            if((document.getElementById("player").innerHTML=="Player 1")&&(document.getElementById("btn5").innerHTML=="")){    
+                document.getElementById("btn5").innerHTML="X";
+                if((document.getElementById("btn5").innerHTML=="X")&&(document.getElementById("btn2").innerHTML=="X")&&(document.getElementById("btn8").innerHTML=="X")){
+                    document.getElementById("player").innerHTML="Player 1 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn2").style.color="white";
+                document.getElementById("btn2").style.backgroundColor="red";
+                document.getElementById("btn2").style.borderColor="red";
+
+                document.getElementById("btn5").style.color="white";
+                document.getElementById("btn5").style.backgroundColor="red";
+                document.getElementById("btn5").style.borderColor="red";
+
+                document.getElementById("btn8").style.color="white";
+                document.getElementById("btn8").style.backgroundColor="red";
+                document.getElementById("btn8").style.borderColor="red";
+                }
+                else if((document.getElementById("btn5").innerHTML=="X")&&(document.getElementById("btn4").innerHTML=="X")&&(document.getElementById("btn6").innerHTML=="X"))
+                {
+                document.getElementById("player").innerHTML="Player 1 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn4").style.color="white";
+                document.getElementById("btn4").style.backgroundColor="red";
+                document.getElementById("btn4").style.borderColor="red";
+
+                document.getElementById("btn5").style.color="white";
+                document.getElementById("btn5").style.backgroundColor="red";
+                document.getElementById("btn5").style.borderColor="red";
+
+                document.getElementById("btn6").style.color="white";
+                document.getElementById("btn6").style.backgroundColor="red";
+                document.getElementById("btn6").style.borderColor="red";
+            }
+            else if((document.getElementById("btn5").innerHTML=="X")&&(document.getElementById("btn1").innerHTML=="X")&&(document.getElementById("btn9").innerHTML=="X"))
+                {
+                document.getElementById("player").innerHTML="Player 1 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn1").style.color="white";
+                document.getElementById("btn1").style.backgroundColor="red";
+                document.getElementById("btn1").style.borderColor="red";
+
+                document.getElementById("btn5").style.color="white";
+                document.getElementById("btn5").style.backgroundColor="red";
+                document.getElementById("btn5").style.borderColor="red";
+
+                document.getElementById("btn9").style.color="white";
+                document.getElementById("btn9").style.backgroundColor="red";
+                document.getElementById("btn9").style.borderColor="red";
+            }
+            else if((document.getElementById("btn5").innerHTML=="X")&&(document.getElementById("btn3").innerHTML=="X")&&(document.getElementById("btn7").innerHTML=="X"))
+                {
+                document.getElementById("player").innerHTML="Player 1 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn3").style.color="white";
+                document.getElementById("btn3").style.backgroundColor="red";
+                document.getElementById("btn3").style.borderColor="red";
+
+                document.getElementById("btn5").style.color="white";
+                document.getElementById("btn5").style.backgroundColor="red";
+                document.getElementById("btn5").style.borderColor="red";
+
+                document.getElementById("btn7").style.color="white";
+                document.getElementById("btn7").style.backgroundColor="red";
+                document.getElementById("btn7").style.borderColor="red";
+            }
+            else if((document.getElementById("btn1").innerHTML!="")&&(document.getElementById("btn2").innerHTML!="")&&(document.getElementById("btn3").innerHTML!="")
+                &&(document.getElementById("btn4").innerHTML!="")&&(document.getElementById("btn5").innerHTML!="")&&(document.getElementById("btn6").innerHTML!="")
+                &&(document.getElementById("btn7").innerHTML!="")&&(document.getElementById("btn8").innerHTML!="")&&(document.getElementById("btn9").innerHTML!=""))
+                {
+                document.getElementById("player").innerHTML="Restart the Game!";
+                document.getElementById("btn").style.marginLeft="9px";
+            }
+            else{
+                document.getElementById("player").innerHTML="Player 2";
+            }
+            }
+            if((document.getElementById("player").innerHTML=="Player 2")&&(document.getElementById("btn5").innerHTML=="")){
+                document.getElementById("btn5").innerHTML="O";
+                if((document.getElementById("btn5").innerHTML=="O")&&(document.getElementById("btn2").innerHTML=="O")&&(document.getElementById("btn8").innerHTML=="O")){
+                    document.getElementById("player").innerHTML="Player 2 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn2").style.color="white";
+                document.getElementById("btn2").style.backgroundColor="red";
+                document.getElementById("btn2").style.borderColor="red";
+
+                document.getElementById("btn5").style.color="white";
+                document.getElementById("btn5").style.backgroundColor="red";
+                document.getElementById("btn5").style.borderColor="red";
+
+                document.getElementById("btn8").style.color="white";
+                document.getElementById("btn8").style.backgroundColor="red";
+                document.getElementById("btn8").style.borderColor="red";
+                }
+                else if((document.getElementById("btn5").innerHTML=="O")&&(document.getElementById("btn4").innerHTML=="O")&&(document.getElementById("btn6").innerHTML=="O"))
+                {
+                document.getElementById("player").innerHTML="Player 2 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn4").style.color="white";
+                document.getElementById("btn4").style.backgroundColor="red";
+                document.getElementById("btn4").style.borderColor="red";
+
+                document.getElementById("btn5").style.color="white";
+                document.getElementById("btn5").style.backgroundColor="red";
+                document.getElementById("btn5").style.borderColor="red";
+
+                document.getElementById("btn6").style.color="white";
+                document.getElementById("btn6").style.backgroundColor="red";
+                document.getElementById("btn6").style.borderColor="red";
+            }
+            else if((document.getElementById("btn5").innerHTML=="O")&&(document.getElementById("btn1").innerHTML=="O")&&(document.getElementById("btn9").innerHTML=="O"))
+                {
+                document.getElementById("player").innerHTML="Player 2 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn1").style.color="white";
+                document.getElementById("btn1").style.backgroundColor="red";
+                document.getElementById("btn1").style.borderColor="red";
+
+                document.getElementById("btn5").style.color="white";
+                document.getElementById("btn5").style.backgroundColor="red";
+                document.getElementById("btn5").style.borderColor="red";
+
+                document.getElementById("btn9").style.color="white";
+                document.getElementById("btn9").style.backgroundColor="red";
+                document.getElementById("btn9").style.borderColor="red";
+            }
+            else if((document.getElementById("btn5").innerHTML=="O")&&(document.getElementById("btn3").innerHTML=="O")&&(document.getElementById("btn7").innerHTML=="O"))
+                {
+                document.getElementById("player").innerHTML="Player 2 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn3").style.color="white";
+                document.getElementById("btn3").style.backgroundColor="red";
+                document.getElementById("btn3").style.borderColor="red";
+
+                document.getElementById("btn5").style.color="white";
+                document.getElementById("btn5").style.backgroundColor="red";
+                document.getElementById("btn5").style.borderColor="red";
+
+                document.getElementById("btn7").style.color="white";
+                document.getElementById("btn7").style.backgroundColor="red";
+                document.getElementById("btn7").style.borderColor="red";
+            }
+            else if((document.getElementById("btn1").innerHTML!="")&&(document.getElementById("btn2").innerHTML!="")&&(document.getElementById("btn3").innerHTML!="")
+                &&(document.getElementById("btn4").innerHTML!="")&&(document.getElementById("btn5").innerHTML!="")&&(document.getElementById("btn6").innerHTML!="")
+                &&(document.getElementById("btn7").innerHTML!="")&&(document.getElementById("btn8").innerHTML!="")&&(document.getElementById("btn9").innerHTML!=""))
+                {
+                document.getElementById("player").innerHTML="Restart the Game!";
+                document.getElementById("btn").style.marginLeft="9px";
+            }
+            else{
+                document.getElementById("player").innerHTML="Player 1";
+            }
+            }
+        }
+        function myfunc6(){
+            if((document.getElementById("player").innerHTML=="Player 1")&&(document.getElementById("btn6").innerHTML=="")){    
+                document.getElementById("btn6").innerHTML="X";
+                if((document.getElementById("btn6").innerHTML=="X")&&(document.getElementById("btn3").innerHTML=="X")&&(document.getElementById("btn9").innerHTML=="X")){
+                    document.getElementById("player").innerHTML="Player 1 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn3").style.color="white";
+                document.getElementById("btn3").style.backgroundColor="red";
+                document.getElementById("btn3").style.borderColor="red";
+
+                document.getElementById("btn9").style.color="white";
+                document.getElementById("btn9").style.backgroundColor="red";
+                document.getElementById("btn9").style.borderColor="red";
+
+                document.getElementById("btn6").style.color="white";
+                document.getElementById("btn6").style.backgroundColor="red";
+                document.getElementById("btn6").style.borderColor="red";
+                }
+                else if((document.getElementById("btn6").innerHTML=="X")&&(document.getElementById("btn5").innerHTML=="X")&&(document.getElementById("btn4").innerHTML=="X"))
+                {
+                document.getElementById("player").innerHTML="Player 1 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn4").style.color="white";
+                document.getElementById("btn4").style.backgroundColor="red";
+                document.getElementById("btn4").style.borderColor="red";
+
+                document.getElementById("btn5").style.color="white";
+                document.getElementById("btn5").style.backgroundColor="red";
+                document.getElementById("btn5").style.borderColor="red";
+
+                document.getElementById("btn6").style.color="white";
+                document.getElementById("btn6").style.backgroundColor="red";
+                document.getElementById("btn6").style.borderColor="red";
+            }
+            else if((document.getElementById("btn1").innerHTML!="")&&(document.getElementById("btn2").innerHTML!="")&&(document.getElementById("btn3").innerHTML!="")
+                &&(document.getElementById("btn4").innerHTML!="")&&(document.getElementById("btn5").innerHTML!="")&&(document.getElementById("btn6").innerHTML!="")
+                &&(document.getElementById("btn7").innerHTML!="")&&(document.getElementById("btn8").innerHTML!="")&&(document.getElementById("btn9").innerHTML!=""))
+                {
+                document.getElementById("player").innerHTML="Restart the Game!";
+                document.getElementById("btn").style.marginLeft="9px";
+            }
+            else{
+                document.getElementById("player").innerHTML="Player 2";
+            }
+            }
+            if((document.getElementById("player").innerHTML=="Player 2")&&(document.getElementById("btn6").innerHTML=="")){
+                document.getElementById("btn6").innerHTML="O";
+                if((document.getElementById("btn6").innerHTML=="O")&&(document.getElementById("btn3").innerHTML=="O")&&(document.getElementById("btn9").innerHTML=="O")){
+                    document.getElementById("player").innerHTML="Player 2 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn3").style.color="white";
+                document.getElementById("btn3").style.backgroundColor="red";
+                document.getElementById("btn3").style.borderColor="red";
+
+                document.getElementById("btn9").style.color="white";
+                document.getElementById("btn9").style.backgroundColor="red";
+                document.getElementById("btn9").style.borderColor="red";
+
+                document.getElementById("btn6").style.color="white";
+                document.getElementById("btn6").style.backgroundColor="red";
+                document.getElementById("btn6").style.borderColor="red";
+                }
+                else if((document.getElementById("btn6").innerHTML=="O")&&(document.getElementById("btn5").innerHTML=="O")&&(document.getElementById("btn4").innerHTML=="O"))
+                {
+                document.getElementById("player").innerHTML="Player 2 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn4").style.color="white";
+                document.getElementById("btn4").style.backgroundColor="red";
+                document.getElementById("btn4").style.borderColor="red";
+
+                document.getElementById("btn5").style.color="white";
+                document.getElementById("btn5").style.backgroundColor="red";
+                document.getElementById("btn5").style.borderColor="red";
+
+                document.getElementById("btn6").style.color="white";
+                document.getElementById("btn6").style.backgroundColor="red";
+                document.getElementById("btn6").style.borderColor="red";
+            }
+            else if((document.getElementById("btn1").innerHTML!="")&&(document.getElementById("btn2").innerHTML!="")&&(document.getElementById("btn3").innerHTML!="")
+                &&(document.getElementById("btn4").innerHTML!="")&&(document.getElementById("btn5").innerHTML!="")&&(document.getElementById("btn6").innerHTML!="")
+                &&(document.getElementById("btn7").innerHTML!="")&&(document.getElementById("btn8").innerHTML!="")&&(document.getElementById("btn9").innerHTML!=""))
+                {
+                document.getElementById("player").innerHTML="Restart the Game!";
+                document.getElementById("btn").style.marginLeft="9px";
+            }
+            else{
+                document.getElementById("player").innerHTML="Player 1";
+            }
+            }
+        }
+        function myfunc7(){
+            if((document.getElementById("player").innerHTML=="Player 1")&&(document.getElementById("btn7").innerHTML=="")){    
+                document.getElementById("btn7").innerHTML="X";
+                if((document.getElementById("btn7").innerHTML=="X")&&(document.getElementById("btn1").innerHTML=="X")&&(document.getElementById("btn4").innerHTML=="X")){
+                    document.getElementById("player").innerHTML="Player 1 Won!";
+                document.getElementById("btn").style.marginLeft="60px";   
+
+                document.getElementById("btn7").style.color="white";
+                document.getElementById("btn7").style.backgroundColor="red";
+                document.getElementById("btn7").style.borderColor="red";
+
+                document.getElementById("btn1").style.color="white";
+                document.getElementById("btn1").style.backgroundColor="red";
+                document.getElementById("btn1").style.borderColor="red";
+
+                document.getElementById("btn4").style.color="white";
+                document.getElementById("btn4").style.backgroundColor="red";
+                document.getElementById("btn4").style.borderColor="red";
+                }
+                else if((document.getElementById("btn7").innerHTML=="X")&&(document.getElementById("btn5").innerHTML=="X")&&(document.getElementById("btn3").innerHTML=="X")){
+                    document.getElementById("player").innerHTML="Player 1 Won!";
+                document.getElementById("btn").style.marginLeft="60px";   
+
+                document.getElementById("btn7").style.color="white";
+                document.getElementById("btn7").style.backgroundColor="red";
+                document.getElementById("btn7").style.borderColor="red";
+
+                document.getElementById("btn5").style.color="white";
+                document.getElementById("btn5").style.backgroundColor="red";
+                document.getElementById("btn5").style.borderColor="red";
+
+                document.getElementById("btn3").style.color="white";
+                document.getElementById("btn3").style.backgroundColor="red";
+                document.getElementById("btn3").style.borderColor="red";
+                }
+                else if((document.getElementById("btn7").innerHTML=="X")&&(document.getElementById("btn8").innerHTML=="X")&&(document.getElementById("btn9").innerHTML=="X"))
+                {
+                document.getElementById("player").innerHTML="Player 1 Won!";
+                document.getElementById("btn").style.marginLeft="60px";   
+
+                document.getElementById("btn7").style.color="white";
+                document.getElementById("btn7").style.backgroundColor="red";
+                document.getElementById("btn7").style.borderColor="red";
+
+                document.getElementById("btn8").style.color="white";
+                document.getElementById("btn8").style.backgroundColor="red";
+                document.getElementById("btn8").style.borderColor="red";
+
+                document.getElementById("btn9").style.color="white";
+                document.getElementById("btn9").style.backgroundColor="red";
+                document.getElementById("btn9").style.borderColor="red";
+            }
+            else if((document.getElementById("btn1").innerHTML!="")&&(document.getElementById("btn2").innerHTML!="")&&(document.getElementById("btn3").innerHTML!="")
+                &&(document.getElementById("btn4").innerHTML!="")&&(document.getElementById("btn5").innerHTML!="")&&(document.getElementById("btn6").innerHTML!="")
+                &&(document.getElementById("btn7").innerHTML!="")&&(document.getElementById("btn8").innerHTML!="")&&(document.getElementById("btn9").innerHTML!=""))
+                {
+                document.getElementById("player").innerHTML="Restart the Game!";
+                document.getElementById("btn").style.marginLeft="9px";
+            }
+            else{
+                document.getElementById("player").innerHTML="Player 2";
+            }
+            }
+            if((document.getElementById("player").innerHTML=="Player 2")&&(document.getElementById("btn7").innerHTML=="")){
+                document.getElementById("btn7").innerHTML="O";
+                if((document.getElementById("btn7").innerHTML=="O")&&(document.getElementById("btn1").innerHTML=="O")&&(document.getElementById("btn4").innerHTML=="O")){
+                    document.getElementById("player").innerHTML="Player 2 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn7").style.color="white";
+                document.getElementById("btn7").style.backgroundColor="red";
+                document.getElementById("btn7").style.borderColor="red";
+
+                document.getElementById("btn1").style.color="white";
+                document.getElementById("btn1").style.backgroundColor="red";
+                document.getElementById("btn1").style.borderColor="red";
+
+                document.getElementById("btn4").style.color="white";
+                document.getElementById("btn4").style.backgroundColor="red";
+                document.getElementById("btn4").style.borderColor="red";
+                }
+                else if((document.getElementById("btn7").innerHTML=="O")&&(document.getElementById("btn5").innerHTML=="O")&&(document.getElementById("btn3").innerHTML=="O")){
+                    document.getElementById("player").innerHTML="Player 2 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn7").style.color="white";
+                document.getElementById("btn7").style.backgroundColor="red";
+                document.getElementById("btn7").style.borderColor="red";
+
+                document.getElementById("btn5").style.color="white";
+                document.getElementById("btn5").style.backgroundColor="red";
+                document.getElementById("btn5").style.borderColor="red";
+
+                document.getElementById("btn3").style.color="white";
+                document.getElementById("btn3").style.backgroundColor="red";
+                document.getElementById("btn3").style.borderColor="red";
+                }
+                else if((document.getElementById("btn7").innerHTML=="O")&&(document.getElementById("btn8").innerHTML=="O")&&(document.getElementById("btn9").innerHTML=="O"))
+                {
+                document.getElementById("player").innerHTML="Player 2 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn7").style.color="white";
+                document.getElementById("btn7").style.backgroundColor="red";
+                document.getElementById("btn7").style.borderColor="red";
+
+                document.getElementById("btn8").style.color="white";
+                document.getElementById("btn8").style.backgroundColor="red";
+                document.getElementById("btn8").style.borderColor="red";
+
+                document.getElementById("btn9").style.color="white";
+                document.getElementById("btn9").style.backgroundColor="red";
+                document.getElementById("btn9").style.borderColor="red";
+            }
+            else if((document.getElementById("btn1").innerHTML!="")&&(document.getElementById("btn2").innerHTML!="")&&(document.getElementById("btn3").innerHTML!="")
+                &&(document.getElementById("btn4").innerHTML!="")&&(document.getElementById("btn5").innerHTML!="")&&(document.getElementById("btn6").innerHTML!="")
+                &&(document.getElementById("btn7").innerHTML!="")&&(document.getElementById("btn8").innerHTML!="")&&(document.getElementById("btn9").innerHTML!=""))
+                {
+                document.getElementById("player").innerHTML="Restart the Game!";
+                document.getElementById("btn").style.marginLeft="9px";
+            }
+            else{
+                document.getElementById("player").innerHTML="Player 1";
+            }
+            }
+        }
+        function myfunc8(){
+            if((document.getElementById("player").innerHTML=="Player 1")&&(document.getElementById("btn8").innerHTML=="")){    
+                document.getElementById("btn8").innerHTML="X";
+                if((document.getElementById("btn8").innerHTML=="X")&&(document.getElementById("btn7").innerHTML=="X")&&(document.getElementById("btn9").innerHTML=="X")){
+                    document.getElementById("player").innerHTML="Player 1 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn7").style.color="white";
+                document.getElementById("btn7").style.backgroundColor="red";
+                document.getElementById("btn7").style.borderColor="red";
+
+                document.getElementById("btn8").style.color="white";
+                document.getElementById("btn8").style.backgroundColor="red";
+                document.getElementById("btn8").style.borderColor="red";
+
+                document.getElementById("btn9").style.color="white";
+                document.getElementById("btn9").style.backgroundColor="red";
+                document.getElementById("btn9").style.borderColor="red";
+                }
+                else if((document.getElementById("btn8").innerHTML=="X")&&(document.getElementById("btn5").innerHTML=="X")&&(document.getElementById("btn2").innerHTML=="X"))
+                {
+                document.getElementById("player").innerHTML="Player 1 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn2").style.color="white";
+                document.getElementById("btn2").style.backgroundColor="red";
+                document.getElementById("btn2").style.borderColor="red";
+
+                document.getElementById("btn8").style.color="white";
+                document.getElementById("btn8").style.backgroundColor="red";
+                document.getElementById("btn8").style.borderColor="red";
+
+                document.getElementById("btn5").style.color="white";
+                document.getElementById("btn5").style.backgroundColor="red";
+                document.getElementById("btn5").style.borderColor="red";
+            }
+            else if((document.getElementById("btn1").innerHTML!="")&&(document.getElementById("btn2").innerHTML!="")&&(document.getElementById("btn3").innerHTML!="")
+                &&(document.getElementById("btn4").innerHTML!="")&&(document.getElementById("btn5").innerHTML!="")&&(document.getElementById("btn6").innerHTML!="")
+                &&(document.getElementById("btn7").innerHTML!="")&&(document.getElementById("btn8").innerHTML!="")&&(document.getElementById("btn9").innerHTML!=""))
+                {
+                document.getElementById("player").innerHTML="Restart the Game!";
+                document.getElementById("btn").style.marginLeft="9px";
+            }
+            else{
+                document.getElementById("player").innerHTML="Player 2";
+            }
+            }
+            if((document.getElementById("player").innerHTML=="Player 2")&&(document.getElementById("btn8").innerHTML=="")){
+                document.getElementById("btn8").innerHTML="O";
+                if((document.getElementById("btn8").innerHTML=="O")&&(document.getElementById("btn7").innerHTML=="O")&&(document.getElementById("btn9").innerHTML=="O")){
+                    document.getElementById("player").innerHTML="Player 2 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn7").style.color="white";
+                document.getElementById("btn7").style.backgroundColor="red";
+                document.getElementById("btn7").style.borderColor="red";
+
+                document.getElementById("btn8").style.color="white";
+                document.getElementById("btn8").style.backgroundColor="red";
+                document.getElementById("btn8").style.borderColor="red";
+
+                document.getElementById("btn9").style.color="white";
+                document.getElementById("btn9").style.backgroundColor="red";
+                document.getElementById("btn9").style.borderColor="red";
+                }
+                else if((document.getElementById("btn8").innerHTML=="O")&&(document.getElementById("btn5").innerHTML=="O")&&(document.getElementById("btn2").innerHTML=="O"))
+                {
+                document.getElementById("player").innerHTML="Player 2 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn2").style.color="white";
+                document.getElementById("btn2").style.backgroundColor="red";
+                document.getElementById("btn2").style.borderColor="red";
+
+                document.getElementById("btn8").style.color="white";
+                document.getElementById("btn8").style.backgroundColor="red";
+                document.getElementById("btn8").style.borderColor="red";
+
+                document.getElementById("btn5").style.color="white";
+                document.getElementById("btn5").style.backgroundColor="red";
+                document.getElementById("btn5").style.borderColor="red";
+                
+            }
+            else if((document.getElementById("btn1").innerHTML!="")&&(document.getElementById("btn2").innerHTML!="")&&(document.getElementById("btn3").innerHTML!="")
+                &&(document.getElementById("btn4").innerHTML!="")&&(document.getElementById("btn5").innerHTML!="")&&(document.getElementById("btn6").innerHTML!="")
+                &&(document.getElementById("btn7").innerHTML!="")&&(document.getElementById("btn8").innerHTML!="")&&(document.getElementById("btn9").innerHTML!=""))
+                {
+                document.getElementById("player").innerHTML="Restart the Game!";
+                document.getElementById("btn").style.marginLeft="9px";
+            }
+            else{
+                document.getElementById("player").innerHTML="Player 1";
+            }
+            }
+        }
+        function myfunc9(){
+            if((document.getElementById("player").innerHTML=="Player 1")&&(document.getElementById("btn9").innerHTML=="")){    
+                document.getElementById("btn9").innerHTML="X";
+                if((document.getElementById("btn9").innerHTML=="X")&&(document.getElementById("btn3").innerHTML=="X")&&(document.getElementById("btn6").innerHTML=="X")){
+                    document.getElementById("player").innerHTML="Player 1 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn3").style.color="white";
+                document.getElementById("btn3").style.backgroundColor="red";
+                document.getElementById("btn3").style.borderColor="red";
+
+                document.getElementById("btn6").style.color="white";
+                document.getElementById("btn6").style.backgroundColor="red";
+                document.getElementById("btn6").style.borderColor="red";
+
+                document.getElementById("btn9").style.color="white";
+                document.getElementById("btn9").style.backgroundColor="red";
+                document.getElementById("btn9").style.borderColor="red";
+                }
+                else if((document.getElementById("btn9").innerHTML=="X")&&(document.getElementById("btn5").innerHTML=="X")&&(document.getElementById("btn1").innerHTML=="X")){
+                    document.getElementById("player").innerHTML="Player 1 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn1").style.color="white";
+                document.getElementById("btn1").style.backgroundColor="red";
+                document.getElementById("btn1").style.borderColor="red";
+
+                document.getElementById("btn5").style.color="white";
+                document.getElementById("btn5").style.backgroundColor="red";
+                document.getElementById("btn5").style.borderColor="red";
+
+                document.getElementById("btn9").style.color="white";
+                document.getElementById("btn9").style.backgroundColor="red";
+                document.getElementById("btn9").style.borderColor="red";
+                }
+                else if((document.getElementById("btn9").innerHTML=="X")&&(document.getElementById("btn8").innerHTML=="X")&&(document.getElementById("btn7").innerHTML=="X"))
+                {
+                document.getElementById("player").innerHTML="Player 1 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn7").style.color="white";
+                document.getElementById("btn7").style.backgroundColor="red";
+                document.getElementById("btn7").style.borderColor="red";
+
+                document.getElementById("btn8").style.color="white";
+                document.getElementById("btn8").style.backgroundColor="red";
+                document.getElementById("btn8").style.borderColor="red";
+
+                document.getElementById("btn9").style.color="white";
+                document.getElementById("btn9").style.backgroundColor="red";
+                document.getElementById("btn9").style.borderColor="red";
+                
+            }
+            else if((document.getElementById("btn1").innerHTML!="")&&(document.getElementById("btn2").innerHTML!="")&&(document.getElementById("btn3").innerHTML!="")
+                &&(document.getElementById("btn4").innerHTML!="")&&(document.getElementById("btn5").innerHTML!="")&&(document.getElementById("btn6").innerHTML!="")
+                &&(document.getElementById("btn7").innerHTML!="")&&(document.getElementById("btn8").innerHTML!="")&&(document.getElementById("btn9").innerHTML!=""))
+                {
+                document.getElementById("player").innerHTML="Restart the Game!";
+                document.getElementById("btn").style.marginLeft="9px";
+            }
+            else{
+                document.getElementById("player").innerHTML="Player 2";
+            }
+            }
+            if((document.getElementById("player").innerHTML=="Player 2")&&(document.getElementById("btn9").innerHTML=="")){
+                document.getElementById("btn9").innerHTML="O";
+                if((document.getElementById("btn9").innerHTML=="O")&&(document.getElementById("btn3").innerHTML=="O")&&(document.getElementById("btn6").innerHTML=="O")){
+                    document.getElementById("player").innerHTML="Player 2 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn3").style.color="white";
+                document.getElementById("btn3").style.backgroundColor="red";
+                document.getElementById("btn3").style.borderColor="red";
+
+                document.getElementById("btn6").style.color="white";
+                document.getElementById("btn6").style.backgroundColor="red";
+                document.getElementById("btn6").style.borderColor="red";
+
+                document.getElementById("btn9").style.color="white";
+                document.getElementById("btn9").style.backgroundColor="red";
+                document.getElementById("btn9").style.borderColor="red";
+                }
+                else if((document.getElementById("btn9").innerHTML=="O")&&(document.getElementById("btn5").innerHTML=="O")&&(document.getElementById("btn1").innerHTML=="O")){
+                    document.getElementById("player").innerHTML="Player 2 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn1").style.color="white";
+                document.getElementById("btn1").style.backgroundColor="red";
+                document.getElementById("btn1").style.borderColor="red";
+
+                document.getElementById("btn5").style.color="white";
+                document.getElementById("btn5").style.backgroundColor="red";
+                document.getElementById("btn5").style.borderColor="red";
+
+                document.getElementById("btn9").style.color="white";
+                document.getElementById("btn9").style.backgroundColor="red";
+                document.getElementById("btn9").style.borderColor="red";
+                }
+                else if((document.getElementById("btn9").innerHTML=="O")&&(document.getElementById("btn8").innerHTML=="O")&&(document.getElementById("btn7").innerHTML=="O"))
+                {
+                document.getElementById("player").innerHTML="Player 2 Won!";
+                document.getElementById("btn").style.marginLeft="60px";
+
+                document.getElementById("btn7").style.color="white";
+                document.getElementById("btn7").style.backgroundColor="red";
+                document.getElementById("btn7").style.borderColor="red";
+
+                document.getElementById("btn8").style.color="white";
+                document.getElementById("btn8").style.backgroundColor="red";
+                document.getElementById("btn8").style.borderColor="red";
+
+                document.getElementById("btn9").style.color="white";
+                document.getElementById("btn9").style.backgroundColor="red";
+                document.getElementById("btn9").style.borderColor="red";
+                
+            }
+            else if((document.getElementById("btn1").innerHTML!="")&&(document.getElementById("btn2").innerHTML!="")&&(document.getElementById("btn3").innerHTML!="")
+                &&(document.getElementById("btn4").innerHTML!="")&&(document.getElementById("btn5").innerHTML!="")&&(document.getElementById("btn6").innerHTML!="")
+                &&(document.getElementById("btn7").innerHTML!="")&&(document.getElementById("btn8").innerHTML!="")&&(document.getElementById("btn9").innerHTML!=""))
+                {
+                document.getElementById("player").innerHTML="Restart the Game!";
+                document.getElementById("btn").style.marginLeft="9px";
+            }
+            else{
+                document.getElementById("player").innerHTML="Player 1";
+            }
+            }
+        }
+        function Restart(){
+            document.getElementById("btn").style.marginLeft="129px";
+
+            document.getElementById("btn1").style.color="rgb(19, 106, 141)";
+            document.getElementById("btn1").style.backgroundColor="rgb(191, 230, 245)";
+            document.getElementById("btn1").style.borderColor="rgb(0, 183, 255)";
+
+            document.getElementById("btn2").style.color="rgb(19, 106, 141)";
+            document.getElementById("btn2").style.backgroundColor="rgb(191, 230, 245)";
+            document.getElementById("btn2").style.borderColor="rgb(0, 183, 255)";
+
+            document.getElementById("btn3").style.color="rgb(19, 106, 141)";
+            document.getElementById("btn3").style.backgroundColor="rgb(191, 230, 245)";
+            document.getElementById("btn3").style.borderColor="rgb(0, 183, 255)";
+
+            document.getElementById("btn4").style.color="rgb(19, 106, 141)";
+            document.getElementById("btn4").style.backgroundColor="rgb(191, 230, 245)";
+            document.getElementById("btn4").style.borderColor="rgb(0, 183, 255)";
+
+            document.getElementById("btn5").style.color="rgb(19, 106, 141)";
+            document.getElementById("btn5").style.backgroundColor="rgb(191, 230, 245)";
+            document.getElementById("btn5").style.borderColor="rgb(0, 183, 255)";
+
+            document.getElementById("btn6").style.color="rgb(19, 106, 141)";
+            document.getElementById("btn6").style.backgroundColor="rgb(191, 230, 245)";
+            document.getElementById("btn6").style.borderColor="rgb(0, 183, 255)";
+
+            document.getElementById("btn7").style.color="rgb(19, 106, 141)";
+            document.getElementById("btn7").style.backgroundColor="rgb(191, 230, 245)";
+            document.getElementById("btn7").style.borderColor="rgb(0, 183, 255)";
+
+            document.getElementById("btn8").style.color="rgb(19, 106, 141)";
+            document.getElementById("btn8").style.backgroundColor="rgb(191, 230, 245)";
+            document.getElementById("btn8").style.borderColor="rgb(0, 183, 255)";
+
+            document.getElementById("btn9").style.color="rgb(19, 106, 141)";
+            document.getElementById("btn9").style.backgroundColor="rgb(191, 230, 245)";
+            document.getElementById("btn9").style.borderColor="rgb(0, 183, 255)";
+            
+            document.getElementById("player").innerHTML="Player 1";
+            document.getElementById("btn1").innerHTML="";
+            document.getElementById("btn2").innerHTML="";
+            document.getElementById("btn3").innerHTML="";
+            document.getElementById("btn4").innerHTML="";
+            document.getElementById("btn5").innerHTML="";
+            document.getElementById("btn6").innerHTML="";
+            document.getElementById("btn7").innerHTML="";
+            document.getElementById("btn8").innerHTML="";
+            document.getElementById("btn9").innerHTML="";
+        }
+        function Hover1(){
+            if(document.getElementById("btn1").style.backgroundColor!="red"){
+            document.getElementById("btn1").style.color="white";
+            document.getElementById("btn1").style.backgroundColor="rgb(0, 183, 255)";
+            document.getElementById("btn1").style.borderColor="rgb(0, 183, 255)";
+            }
+        }
+        function Leave1(){
+            if(document.getElementById("btn1").style.backgroundColor!="red"){
+            document.getElementById("btn1").style.color="rgb(19, 106, 141)";
+            document.getElementById("btn1").style.backgroundColor="rgb(191, 230, 245)";
+            document.getElementById("btn1").style.borderColor="rgb(0, 183, 255)";
+            }
+        }
+        function Hover2(){
+            if(document.getElementById("btn2").style.backgroundColor!="red"){
+            document.getElementById("btn2").style.color="white";
+            document.getElementById("btn2").style.backgroundColor="rgb(0, 183, 255)";
+            document.getElementById("btn2").style.borderColor="rgb(0, 183, 255)";
+            }
+        }
+        function Leave2(){
+            if(document.getElementById("btn2").style.backgroundColor!="red"){
+            document.getElementById("btn2").style.color="rgb(19, 106, 141)";
+            document.getElementById("btn2").style.backgroundColor="rgb(191, 230, 245)";
+            document.getElementById("btn2").style.borderColor="rgb(0, 183, 255)";
+            }
+        }
+        function Hover3(){
+            if(document.getElementById("btn3").style.backgroundColor!="red"){
+            document.getElementById("btn3").style.color="white";
+            document.getElementById("btn3").style.backgroundColor="rgb(0, 183, 255)";
+            document.getElementById("btn3").style.borderColor="rgb(0, 183, 255)";
+            }
+        }
+        function Leave3(){
+            if(document.getElementById("btn3").style.backgroundColor!="red"){
+            document.getElementById("btn3").style.color="rgb(19, 106, 141)";
+            document.getElementById("btn3").style.backgroundColor="rgb(191, 230, 245)";
+            document.getElementById("btn3").style.borderColor="rgb(0, 183, 255)";
+            }
+        }
+        function Hover4(){
+            if(document.getElementById("btn4").style.backgroundColor!="red"){
+            document.getElementById("btn4").style.color="white";
+            document.getElementById("btn4").style.backgroundColor="rgb(0, 183, 255)";
+            document.getElementById("btn4").style.borderColor="rgb(0, 183, 255)";
+            }
+        }
+        function Leave4(){
+            if(document.getElementById("btn4").style.backgroundColor!="red"){
+            document.getElementById("btn4").style.color="rgb(19, 106, 141)";
+            document.getElementById("btn4").style.backgroundColor="rgb(191, 230, 245)";
+            document.getElementById("btn4").style.borderColor="rgb(0, 183, 255)";
+            }
+        }
+        function Hover5(){
+            if(document.getElementById("btn5").style.backgroundColor!="red"){
+            document.getElementById("btn5").style.color="white";
+            document.getElementById("btn5").style.backgroundColor="rgb(0, 183, 255)";
+            document.getElementById("btn5").style.borderColor="rgb(0, 183, 255)";
+            }
+        }
+        function Leave5(){
+            if(document.getElementById("btn5").style.backgroundColor!="red"){
+            document.getElementById("btn5").style.color="rgb(19, 106, 141)";
+            document.getElementById("btn5").style.backgroundColor="rgb(191, 230, 245)";
+            document.getElementById("btn5").style.borderColor="rgb(0, 183, 255)";
+            }
+        }
+        function Hover6(){
+            if(document.getElementById("btn6").style.backgroundColor!="red"){
+            document.getElementById("btn6").style.color="white";
+            document.getElementById("btn6").style.backgroundColor="rgb(0, 183, 255)";
+            document.getElementById("btn6").style.borderColor="rgb(0, 183, 255)";
+            }
+        }
+        function Leave6(){
+            if(document.getElementById("btn6").style.backgroundColor!="red"){
+            document.getElementById("btn6").style.color="rgb(19, 106, 141)";
+            document.getElementById("btn6").style.backgroundColor="rgb(191, 230, 245)";
+            document.getElementById("btn6").style.borderColor="rgb(0, 183, 255)";
+            }
+        }
+        function Hover7(){
+            if(document.getElementById("btn7").style.backgroundColor!="red"){
+            document.getElementById("btn7").style.color="white";
+            document.getElementById("btn7").style.backgroundColor="rgb(0, 183, 255)";
+            document.getElementById("btn7").style.borderColor="rgb(0, 183, 255)";
+            }
+        }
+        function Leave7(){
+            if(document.getElementById("btn7").style.backgroundColor!="red"){
+            document.getElementById("btn7").style.color="rgb(19, 106, 141)";
+            document.getElementById("btn7").style.backgroundColor="rgb(191, 230, 245)";
+            document.getElementById("btn7").style.borderColor="rgb(0, 183, 255)";
+            }
+        }
+        function Hover8(){
+            if(document.getElementById("btn8").style.backgroundColor!="red"){
+            document.getElementById("btn8").style.color="white";
+            document.getElementById("btn8").style.backgroundColor="rgb(0, 183, 255)";
+            document.getElementById("btn8").style.borderColor="rgb(0, 183, 255)";
+            }
+        }
+        function Leave8(){
+            if(document.getElementById("btn8").style.backgroundColor!="red"){
+            document.getElementById("btn8").style.color="rgb(19, 106, 141)";
+            document.getElementById("btn8").style.backgroundColor="rgb(191, 230, 245)";
+            document.getElementById("btn8").style.borderColor="rgb(0, 183, 255)";
+            }
+        }
+        function Hover9(){
+            if(document.getElementById("btn9").style.backgroundColor!="red"){
+            document.getElementById("btn9").style.color="white";
+            document.getElementById("btn9").style.backgroundColor="rgb(0, 183, 255)";
+            document.getElementById("btn9").style.borderColor="rgb(0, 183, 255)";
+            }
+        }
+        function Leave9(){
+            if(document.getElementById("btn9").style.backgroundColor!="red"){
+            document.getElementById("btn9").style.color="rgb(19, 106, 141)";
+            document.getElementById("btn9").style.backgroundColor="rgb(191, 230, 245)";
+            document.getElementById("btn9").style.borderColor="rgb(0, 183, 255)";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div style="margin-left: 35%;margin-top: 1.5%;border: 3px solid rgb(226, 43, 180);border-radius: 5px; padding: 13px; width: 380px;height: 600px;">
+        <h1 style="color: rgb(226, 43, 180); text-align: center;font-weight: bold;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 70px;">XO GAME</h1>
+        <table style="margin-bottom: 20px;margin-left: 50px;margin-top: -20px;">
+            <tr>
+                <td><P id="player" style="color: rgb(112, 46, 173); font-family: Arial, Helvetica, sans-serif;font-size: 25px;font-weight:bolder;">Player 1</P></td>
+                <td><button id="btn" type="button" onclick="Restart()" style="cursor: pointer; color: white;background-color: rgb(174, 49, 199);padding: 12px;border-radius: 40px;font-family: Arial, Helvetica, sans-serif;font-size: 10px;font-weight:bold;border-color: rgb(149, 36, 172);margin-left: 129px;width: 70px;height: 70px;border: 4px double goldenrod;padding: 10px;text-align: center;">RESTART</button></td>
+           
+            </tr>
+        </table>
+        <table style="text-align: center;margin-left: 40px;">
+            
+            <tr>
+                <td><button id="btn1" value=7 type="button" onmouseover="Hover1()" onmouseout="Leave1()" onclick="myfunc1()" style="cursor: pointer; color: rgb(19, 106, 141);background-color: rgb(191, 230, 245);padding: 12px;border-radius: 10px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: 50px;border-color: rgb(0, 183, 255);width: 100px;height: 100px;"></button></td>
+                <td><button id="btn2" value=8 type="button" onmouseover="Hover2()" onmouseout="Leave2()" onclick="myfunc2()" style="cursor: pointer; color: rgb(19, 106, 141);background-color: rgb(191, 230, 245);padding: 12px;border-radius: 10px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: 50px;border-color: rgb(0, 183, 255);width: 100px;height: 100px;"></button></td>
+                <td><button id="btn3" value=9 type="button" onmouseover="Hover3()" onmouseout="Leave3()" onclick="myfunc3()" style="cursor: pointer; color: rgb(19, 106, 141);background-color: rgb(191, 230, 245);padding: 12px;border-radius: 10px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: 50px;border-color: rgb(0, 183, 255);width: 100px;height: 100px;"></button></td>
+            </tr>
+            <tr>
+                <td><button id="btn4" value=4 type="button" onmouseover="Hover4()" onmouseout="Leave4()" onclick="myfunc4()" style="cursor: pointer; color: rgb(19, 106, 141);background-color: rgb(191, 230, 245);padding: 12px;border-radius: 10px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: 50px;border-color: rgb(0, 183, 255);width: 100px;height: 100px;"></button></td>
+                <td><button id="btn5" value=5 type="button" onmouseover="Hover5()" onmouseout="Leave5()" onclick="myfunc5()" style="cursor: pointer; color: rgb(19, 106, 141);background-color: rgb(191, 230, 245);padding: 12px;border-radius: 10px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: 50px;border-color: rgb(0, 183, 255);width: 100px;height: 100px;"></button></td>
+                <td><button id="btn6" value=6 type="button" onmouseover="Hover6()" onmouseout="Leave6()" onclick="myfunc6()" style="cursor: pointer; color: rgb(19, 106, 141);background-color: rgb(191, 228, 245);padding: 12px;border-radius: 10px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: 50px;border-color: rgb(0, 183, 255);width: 100px;height: 100px;"></button></td>
+            </tr>
+            <tr>
+                <td><button id="btn7" value=1 type="button" onmouseover="Hover7()" onmouseout="Leave7()" onclick="myfunc7()" style="cursor: pointer; color: rgb(19, 106, 141);background-color: rgb(191, 230, 245);padding: 12px;border-radius: 10px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: 50px;border-color: rgb(0, 183, 255);width: 100px;height: 100px;"></button></td>
+                <td><button id="btn8" value=2 type="button" onmouseover="Hover8()" onmouseout="Leave8()" onclick="myfunc8()" style="cursor: pointer; color: rgb(19, 106, 141);background-color: rgb(191, 230, 245);padding: 12px;border-radius: 10px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: 50px;border-color: rgb(0, 183, 255);width: 100px;height: 100px;"></button></td>
+                <td><button id="btn9" value=3 type="button" onmouseover="Hover9()" onmouseout="Leave9()" onclick="myfunc9()" style="cursor: pointer; color: rgb(19, 106, 141);background-color: rgb(191, 230, 245);padding: 12px;border-radius: 10px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;font-size: 50px;border-color: rgb(0, 183, 255);width: 100px;height: 100px;"></button></td>
+            </tr>
+            
+        </table>
+    </div>
+</body>
+</html>

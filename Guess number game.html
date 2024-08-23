@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Number</title>
+    <style>
+        .home h1{
+            color: coral; 
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center; 
+            margin-top: 5%;
+            margin-bottom: 5%;             
+        }
+        .home input{
+            margin-left: 10%;
+            border: 2px crimson solid;
+            padding: 10px;
+            height: 25px;
+            width: 150px;
+            color: brown;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: larger;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+        .home button{
+            background-color: chocolate;
+            border: 0px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: larger;
+            font-weight: bold;
+            color: white;
+            border-radius: 10px;
+            width: 120px;
+            height: 50px;
+            cursor: pointer;
+        }
+        .trials{
+            border: 2px rgb(184, 187, 169) solid;
+            margin-left: 40%;
+            margin-top: -50px;
+            width: 600px;
+            border-radius: 20px;
+        }
+        .trials h2{
+            text-align: center;
+            color:rgb(218, 90, 116);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .mytable{
+            padding-bottom: 20px;
+            padding-left: 60px;
+        }
+        .mytable input{
+            background-color: rgb(235, 227, 233);
+            color: rgb(97, 59, 94);
+            border: 2px rgb(212, 176, 209) solid;
+            height: 50px;
+            margin-left: 25px;
+            border-radius: 20px;
+            width: 200px;
+        }
+        table tbody{
+            height: 300px;
+            overflow-y: scroll;
+            display: block;
+            padding-right: 10px;
+        }
+        table thead{
+            display: block;
+        }
+    </style>
+    <script>
+        var nums=[];
+       nums.push(Math.floor(Math.random()*9)+1);
+       while(nums.length<5){
+        randNUM=Math.floor(Math.random()*9)+1;
+        count = 0;
+       for(i=0;i<nums.length;i++){
+        if(nums[i]==randNUM){
+            count++;   
+        }
+       }
+       if(count==0){
+        nums.push(randNUM);
+       }
+    }
+    randomNumber="";
+    for(i=0;i<4;i++){
+        //window.alert(nums[i]);
+        randomNumber+=String(nums[i]);
+    }
+       var trial=0;
+        function randn(){
+
+            var zero=0;
+            var Negative=0;
+            var decimal=0;
+            var countDigit=0;
+            for(z=0;z<4;z++){
+                for(y=0;y<4;y++){
+                    if(String(document.getElementById("GuessedNumber").value)[z]==String(document.getElementById("GuessedNumber").value)[y]){
+                    countDigit++;
+                }
+                }
+                
+                if(String(document.getElementById("GuessedNumber").value)[z]=="0"){
+                    zero++;
+                }
+                if(String(document.getElementById("GuessedNumber").value)[z]=="-"){
+                    Negative++;
+                }
+                if(String(document.getElementById("GuessedNumber").value)[z]=="."){
+                    decimal++;
+                }
+            }
+            if((String(document.getElementById("GuessedNumber").value).length==4)&&(zero==0)&&(Negative==0)&&(decimal==0)&&(countDigit==4)){
+            //window.alert(randomNumber); 
+            var collect=[];
+            var rows=[];
+            var columns=[];
+            var A=0;
+            var B=0;
+            
+            for(i=0;i<4;i++){
+                if(String(document.getElementById("GuessedNumber").value)[i]==randomNumber[i]){
+                    A++;
+                }
+                else{
+                    collect.push(i);
+                }
+            }
+            if(A<4){
+                for(j=0;j<collect.length;j++){
+                    
+                    for(k=0;k<collect.length;k++){
+                        if(j!=k){
+                            var r=0;
+                            var c=0;
+                            for(l=0;l<rows.length;l++){
+                                if(j==rows[l])
+                                r++;
+                                if(k==columns[l])
+                                c++;
+                            }
+                            if((r==0)&&(c==0)){
+                            if(String(document.getElementById("GuessedNumber").value)[collect[j]]==randomNumber[collect[k]]){
+                                B++;
+                                rows.push(j);
+                                columns.push(k);
+                            }
+                            }
+                        }
+                    }
+                }
+            }
+        var result;
+        //window.alert(String(document.getElementById("GuessedNumber").value));
+        if((A==0)&&(B==0)){
+            result="4F";
+            //window.alert("4F");
+            trial++;
+        }
+        else{
+            result=String(A)+"A "+String(B)+"B";
+            //window.alert(String(A)+"A "+String(B)+"B");
+            trial++;
+        }
+
+        document.getElementById("trialNo").innerHTML="TRIALS : "+trial;
+        var mytable = document.getElementById("mytable");
+        var rows = mytable.rows.length;
+        var r = mytable.insertRow(rows);
+        
+        var c2 = r.insertCell(0);
+        var c3 = r.insertCell(1);
+        
+        var roll = document.createElement("input");
+        var name=document.createElement("input");
+        
+        roll.type = "button";
+        name.type ="button";
+        roll.value=String(document.getElementById("GuessedNumber").value);
+        name.value=result;
+        if(A==4){
+            window.alert("YOU WON!")
+            roll.style.backgroundColor = "rgb(226, 228, 132)";
+            roll.style.color = "white";
+            roll.style.borderColor = "rgb(196, 197, 107)";
+            name.style.backgroundColor = "rgb(226, 228, 132)";
+            name.style.color = "white";
+            name.style.borderColor = "rgb(196, 197, 107)";
+        }
+        
+        c2.appendChild(roll);
+        c3.appendChild(name);
+        mytable.lastElementChild.scrollTop=mytable.lastElementChild.scrollHeight;//To scroll the last cells to the top
+    }
+    else{
+    window.alert("Make sure the number is positive integer, 4 non-repetitive digits and don't include '0' in your number!");
+    }
+    }
+    function newGame(){
+        window.alert("The number was : "+randomNumber); 
+        window.location.reload();
+    }
+    function tryAgain(){
+        var mytable=document.getElementById("mytable");
+        var rows = mytable.rows.length;
+        //window.alert(rows);
+
+        for(var i=0;i<rows;i++)
+        {
+        mytable.deleteRow(0);
+        }
+        trial=0;
+        document.getElementById("trialNo").innerHTML="TRIALS";
+    }
+    function EnterNumber(){
+        if(event.key==='Enter'){
+            randn();
+        }
+}
+    </script>
+</head>
+<body>
+    <div class="home">
+        <h1>GUESS NUMBER</h1>
+        <p id="randomNo"></p>
+        <input id="GuessedNumber" onkeydown="EnterNumber()" type="number">
+        <button onclick="randn()">ENTER</button>
+        <div class="trials">
+        <h2 id="trialNo">TRIALS</h2>
+        <table class="mytable" id = "mytable">
+            <thead><button onclick="tryAgain()" style="margin-left: 90px; width: 210px;background-color: rgb(199, 173, 223);">TRY AGAIN</button>
+                <button onclick="newGame()" style="margin-left: 10px; width: 210px;background-color: rgb(204, 150, 150);">NEW GAME</button>
+                <br>
+                <br>
+            </thead>
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Number With/out Repitition</title>
+    <style>
+        .home h1{
+            color: coral; 
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center; 
+            margin-top: 5%;
+            margin-bottom: 5%;             
+        }
+        .home input{
+            margin-left: 10%;
+            border: 2px crimson solid;
+            padding: 10px;
+            height: 25px;
+            width: 150px;
+            color: brown;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: larger;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+        .home button{
+            background-color: chocolate;
+            border: 0px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: larger;
+            font-weight: bold;
+            color: white;
+            border-radius: 10px;
+            width: 120px;
+            height: 50px;
+            cursor: pointer;
+        }
+        .trials{
+            border: 2px rgb(184, 187, 169) solid;
+            margin-left: 40%;
+            margin-top: -50px;
+            width: 600px;
+            border-radius: 20px;
+        }
+        .trials h2{
+            text-align: center;
+            color:rgb(218, 90, 116);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .mytable{
+            padding-bottom: 20px;
+            padding-left: 60px;
+        }
+        .mytable input{
+            background-color: rgb(235, 227, 233);
+            color: rgb(97, 59, 94);
+            border: 2px rgb(212, 176, 209) solid;
+            height: 50px;
+            margin-left: 25px;
+            border-radius: 20px;
+            width: 200px;
+        }
+        table tbody{
+            height: 300px;
+            overflow-y: scroll;
+            display: block;
+            padding-right: 10px;
+        }
+        table thead{
+            display: block;
+        }
+    </style>
+    <script>
+       var randomNumber=String(Math.floor(Math.random()*9)+1)+String(Math.floor(Math.random()*9)+1)+String(Math.floor(Math.random()*9)+1)+String(Math.floor(Math.random()*9)+1);
+       var trial=0;
+        function randn(){
+            var zero=0;
+            var Negative=0;
+            var decimal=0;
+            for(z=0;z<4;z++){
+                if(String(document.getElementById("GuessedNumber").value)[z]=="0"){
+                    zero++;
+                }
+                if(String(document.getElementById("GuessedNumber").value)[z]=="-"){
+                    Negative++;
+                }
+                if(String(document.getElementById("GuessedNumber").value)[z]=="."){
+                    decimal++;
+                }
+            }
+            if((String(document.getElementById("GuessedNumber").value).length==4)&&(zero==0)&&(Negative==0)&&(decimal==0)){
+            //window.alert(randomNumber); 
+            var collect=[];
+            var rows=[];
+            var columns=[];
+            var A=0;
+            var B=0;
+            
+            for(i=0;i<4;i++){
+                if(String(document.getElementById("GuessedNumber").value)[i]==randomNumber[i]){
+                    A++;
+                }
+                else{
+                    collect.push(i);
+                }
+            }
+            if(A<4){
+                for(j=0;j<collect.length;j++){
+                    
+                    for(k=0;k<collect.length;k++){
+                        if(j!=k){
+                            var r=0;
+                            var c=0;
+                            for(l=0;l<rows.length;l++){
+                                if(j==rows[l])
+                                r++;
+                                if(k==columns[l])
+                                c++;
+                            }
+                            if((r==0)&&(c==0)){
+                            if(String(document.getElementById("GuessedNumber").value)[collect[j]]==randomNumber[collect[k]]){
+                                B++;
+                                rows.push(j);
+                                columns.push(k);
+                            }
+                            }
+                        }
+                    }
+                }
+            }
+        var result;
+        //window.alert(String(document.getElementById("GuessedNumber").value));
+        if((A==0)&&(B==0)){
+            result="4F";
+            //window.alert("4F");
+            trial++;
+        }
+        else{
+            result=String(A)+"A "+String(B)+"B";
+            //window.alert(String(A)+"A "+String(B)+"B");
+            trial++;
+        }
+
+        document.getElementById("trialNo").innerHTML="TRIALS : "+trial;
+        var mytable = document.getElementById("mytable");
+        var rows = mytable.rows.length;
+        var r = mytable.insertRow(rows);
+        
+        var c2 = r.insertCell(0);
+        var c3 = r.insertCell(1);
+        
+        var roll = document.createElement("input");
+        var name=document.createElement("input");
+        
+        roll.type = "button";
+        name.type ="button";
+        roll.value=String(document.getElementById("GuessedNumber").value);
+        name.value=result;
+        if(A==4){
+            window.alert("YOU WON!")
+            roll.style.backgroundColor = "rgb(226, 228, 132)";
+            roll.style.color = "white";
+            roll.style.borderColor = "rgb(196, 197, 107)";
+            name.style.backgroundColor = "rgb(226, 228, 132)";
+            name.style.color = "white";
+            name.style.borderColor = "rgb(196, 197, 107)";
+        }
+        
+        c2.appendChild(roll);
+        c3.appendChild(name);
+        mytable.lastElementChild.scrollTop=mytable.lastElementChild.scrollHeight;//To scroll the last cells to the top
+    }
+    else{
+    window.alert("Make sure the number is positive integer, 4 digits and don't include '0' in your number!");
+    }
+    }
+    function newGame(){
+        window.alert("The number was : "+randomNumber); 
+        window.location.reload();
+    }
+    function tryAgain(){
+        var mytable=document.getElementById("mytable");
+        var rows = mytable.rows.length;
+        window.alert(rows);
+
+        for(var i=0;i<rows;i++)
+        {
+        mytable.deleteRow(0);
+        }
+        trial=0;
+        document.getElementById("trialNo").innerHTML="TRIALS";
+    }
+    function EnterNumber(){
+        if(event.key==='Enter'){
+            randn();
+        }
+}
+    </script>
+</head>
+<body>
+    <div class="home">
+        <h1>GUESS NUMBER</h1>
+        <p id="randomNo"></p>
+        <input id="GuessedNumber" onkeydown="EnterNumber()" type="number">
+        <button onclick="randn()">ENTER</button>
+        <div class="trials">
+        <h2 id="trialNo">TRIALS</h2>
+        <table class="mytable" id = "mytable">
+            <thead><button onclick="tryAgain()" style="margin-left: 90px; width: 210px;background-color: rgb(199, 173, 223);">TRY AGAIN</button>
+                <button onclick="newGame()" style="margin-left: 10px; width: 210px;background-color: rgb(204, 150, 150);">NEW GAME</button>
+                <br>
+                <br>
+            </thead>
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+-->
